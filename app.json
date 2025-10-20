@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "exemploMENU",
-    "slug": "exemploMENU",
+    "name": "appNavegacao",
+    "slug": "appNavegacao",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
