@@ -1,50 +1,51 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import HomeScreen from './screens/HomeScreen'
 import DetailsScreen from './screens/DetailsScreen'
 import AboutScreen from './screens/AboutScreen'
 
-const Drawer = createDrawerNavigator()
+const Tab = createBottomTabNavigator()
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName='Home'>
+      <Tab.Navigator initialRouteName='Home'>
 
-        <Drawer.Screen name="Home" component={HomeScreen}
+        <Tab.Screen name="Home" component={HomeScreen}
           options={{
             title: 'Home Page',
-            DrawerIcon: ({ color, size }) => (
+            tabBarIcon: ({ color, size }) => (
               <Icon name="home" color={color} size={size} />
             ),
             
           }} />
 
-        <Drawer.Screen
+        <Tab.Screen
           name='Details'
           component={DetailsScreen}
           options={{ 
             title: 'Details Page',
-            DrawerIcon: ({ color, size }) => (
+            tabBarIcon: ({ color, size }) => (
               <Icon name="details" color={color} size={size} />
             ),
           
           }}
         />
-        <Drawer.Screen
+        <Tab.Screen
           name="About"
           component={AboutScreen}
           options={{ 
             title: 'About Page',
-            DrawerIcon: ({ color, size }) => (
+            tabBarIcon: ({ color, size }) => (
               <Icon name="business" color={color} size={size} />
             ),
             
             }} />
-      </Drawer.Navigator>
+      </Tab.Navigator>
     </NavigationContainer>
   )
 }
