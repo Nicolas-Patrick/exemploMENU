@@ -8,14 +8,16 @@ import ProductScreen from './screens/ProductScreen'
 
 const Stack = createStackNavigator()
 
-export default function AppStack(){
+export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Home'>
-        <Stack.Screen name= "Home" component = {HomeScreen} />
-        <Stack.Screen name= "Details" component = {DetailsScreen} />
-        <Stack.Screen name= "About" component={AboutScreen} />
-        <Stack.Screen name= "Product" component={ProductScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen} />
+        <Stack.Screen name="About" component={AboutScreen} />
+        <Stack.Screen name="Product" component={ProductScreen} />
+        <Stack.Screen name="Calculadora" component={CalculadoraScreen} />
+        <Stack.Screen name="IMC" component={IMCScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   )

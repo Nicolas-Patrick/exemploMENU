@@ -1,6 +1,7 @@
 import React from "react";
 import {View, Text, Button, StyleSheet} from 'react-native'
 
+
 export default function HomeScreen({navigation}){
     return(
         <View style={estilos.container}>
